@@ -10,7 +10,7 @@
   <script type="text/javascript" src="l10n.js"></script>
   <link rel="resource" type="application/l10n" href="locales.ini" />
   <link href="//mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" rel="stylesheet"/>
-  <title>What can I do for Mozilla</title>
+  <title>What can I do for Scribus (Free Libre Open Source Desktop Publishing solution)</title>
   <!-- #responses div elements has display:none by default in case if js is disabled -->
   <script>
     $(document).ready(function() {
@@ -75,11 +75,11 @@
     <div class="group" id="softtest">
       <span class="question" data-l10n-id="qa-intro"></span>
       <ul class="choices">
-        <li target="https://quality.mozilla.org/teams/desktop-firefox/" data-choice-id="ffqa">Scribus QA
-          <div class="extra" data-l10n-id="ffqa-extra"></div>
+        <li target="https://quality.mozilla.org/teams/desktop-firefox/" data-choice-id="scribusqa">Scribus QA
+          <div class="extra" data-l10n-id="scribusqa-extra"></div>
         </li>
-        <li target="https://quality.mozilla.org/teams/thunderbird/" data-choice-id="tbqa">Scripter QA
-          <div class="extra" data-l10n-id="thunderbirdqa-extra"></div>
+        <li target="https://quality.mozilla.org/teams/thunderbird/" data-choice-id="scripterqa">Scripter QA
+          <div class="extra" data-l10n-id="scripterqa-extra"></div>
         </li>
         <li target="https://quality.mozilla.org/teams/web-qa/" data-choice-id="webqa">Web QA
           <div class="extra" data-l10n-id="webqa-extra"></div>
@@ -188,29 +188,17 @@
       <span class="question" data-l10n-id="question"></span>
       <ul class="choices">
         <li next-group="cpp">C++</li>
-        <li next-group="js">JavaScript</li>
-        <li next-group="java">Java</li>
         <li next-group="py">Python</li>
+<!--    <li next-group="js">JavaScript</li>
         <li next-group="php">PHP</li>
+        <li next-group="java">Java</li>
         <li next-group="perl">Perl</li>
         <li next-group="c">C</li>
         <li next-group="rust">Rust</li>
-        <li next-group="go">Go</li>
+        <li next-group="go">Go</li> -->
       </ul>
     </div>
-
-    <div class="group" id="rust">
-      <span class="question" data-l10n-id="rust-intro"></span>
-      <ul class="choices">
-        <li target="https://github.com/mozilla/rust/wiki" data-choice-id="rustc">rustc
-          <div class="extra" data-l10n-id="rustc-extra"></div>
-        </li>
-        <li target="https://github.com/mozilla/servo/blob/master/CONTRIBUTING.md" data-choice-id="servo">Servo
-          <div class="extra" data-l10n-id="servo-extra"></div>
-        </li>
-      </ul>
-    </div>
-
+<!-- C++ Language -->
     <div class="group" id="cpp">
       <span class="question" data-l10n-id="cpp-intro"></span>
       <ul class="choices">
@@ -234,6 +222,71 @@
         </li>
         <li target="https://wiki.mozilla.org/MathML:Home_Page" data-choice-id="mathml">MathML
           <div class="extra" data-l10n-id="cpp-mathml-extra"></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="group" id="ff-cpp">
+      <span class="question" data-l10n-id="ff-cpp-intro"></span>
+      <ul class="choices">
+        <li target="https://developer.mozilla.org/docs/Introduction" data-choice-id="general">General Firefox work
+          <div class="extra" data-l10n-id="ff-cpp-ff-extra"></div>
+        </li>
+        <li target="https://wiki.mozilla.org/Platform/GFX/Contribute" data-choice-id="graphics">Graphics
+          <div class="extra" data-l10n-id="ff-cpp-graphics-extra"></div>
+        </li>
+        <li target="https://wiki.mozilla.org/Accessibility/Contribute" data-choice-id="accessibility">Accessibility
+          <div class="extra" data-l10n-id="ff-cpp-access-extra"></div>
+        </li>
+        <li target="http://wiki.mozilla.org/Networking" data-choice-id="networking">Networking
+          <div class="extra" data-l10n-id="ff-cpp-net-extra"></div>
+        </li>
+        <li target="https://wiki.mozilla.org/JavaScript:New_to_SpiderMonkey" data-choice-id="spidermonkey">Spidermonkey: the JavaScript engine
+          <div class="extra" data-l10n-id="ff-cpp-spider-extra"></div>
+        </li>
+        <li target="https://wiki.mozilla.org/Media" data-choice-id="media">Media
+          <div class="extra" data-l10n-id="ff-cpp-media-extra"></div>
+        </li>
+      </ul>
+    </div>
+
+<!-- Python Language -->
+    <div class="group" id="py">
+      <span class="question" data-l10n-id="py-intro"></span>
+      <ul class="choices">
+        <li target="https://developer.mozilla.org/docs/Introduction" data-choice-id="firefox">Firefox
+          <div class="extra" data-l10n-id="py-firefox-extra"></div>
+        </li>
+        <li target="https://wiki.mozilla.org/Webdev/GetInvolved" data-choice-id="web-development">Web development
+          <div class="extra" data-l10n-id="py-webdev-extra"></div>
+        </li>
+        <li target="https://wiki.mozilla.org/DXR" data-choice-id="dxr">DXR
+          <div class="extra" data-l10n-id="py-dxr-extra"></div>
+        </li>
+        <li target="https://wiki.mozilla.org/Auto-tools/New_Contributor" data-choice-id="tools">Tools &amp; Automation
+          <div class="extra" data-l10n-id="py-tools-extra"></div>
+        </li>
+        <li target="https://quality.mozilla.org/teams/web-qa/" data-choice-id="webqa-py">Web QA
+          <div class="extra" data-l10n-id="py-webqa-extra"></div>
+        </li>
+        <li target="https://wiki.mozilla.org/ReleaseEngineering/Contribute" data-choice-id="releng-py">Release Engineering
+          <div class="extra" data-l10n-id="py-releng-extra"></div>
+        </li>
+        <li target="https://github.com/mozilla/treeherder-ui/" data-choice-id="treeherder">Treeherder
+          <div class="extra" data-l10n-id="treeherder-extra"></div>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="group" id="rust">
+      <span class="question" data-l10n-id="rust-intro"></span>
+      <ul class="choices">
+        <li target="https://github.com/mozilla/rust/wiki" data-choice-id="rustc">rustc
+          <div class="extra" data-l10n-id="rustc-extra"></div>
+        </li>
+        <li target="https://github.com/mozilla/servo/blob/master/CONTRIBUTING.md" data-choice-id="servo">Servo
+          <div class="extra" data-l10n-id="servo-extra"></div>
         </li>
       </ul>
     </div>
@@ -337,32 +390,7 @@
       </ul>
     </div>
 
-    <div class="group" id="py">
-      <span class="question" data-l10n-id="py-intro"></span>
-      <ul class="choices">
-        <li target="https://developer.mozilla.org/docs/Introduction" data-choice-id="firefox">Firefox
-          <div class="extra" data-l10n-id="py-firefox-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Webdev/GetInvolved" data-choice-id="web-development">Web development
-          <div class="extra" data-l10n-id="py-webdev-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/DXR" data-choice-id="dxr">DXR
-          <div class="extra" data-l10n-id="py-dxr-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Auto-tools/New_Contributor" data-choice-id="tools">Tools &amp; Automation
-          <div class="extra" data-l10n-id="py-tools-extra"></div>
-        </li>
-        <li target="https://quality.mozilla.org/teams/web-qa/" data-choice-id="webqa-py">Web QA
-          <div class="extra" data-l10n-id="py-webqa-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/ReleaseEngineering/Contribute" data-choice-id="releng-py">Release Engineering
-          <div class="extra" data-l10n-id="py-releng-extra"></div>
-        </li>
-        <li target="https://github.com/mozilla/treeherder-ui/" data-choice-id="treeherder">Treeherder
-          <div class="extra" data-l10n-id="treeherder-extra"></div>
-        </li>
-      </ul>
-    </div>
+
 
     <div class="group" id="php">
       <span class="question" data-l10n-id="php-intro"></span>
@@ -391,29 +419,6 @@
       </ul>
     </div>
 
-    <div class="group" id="ff-cpp">
-      <span class="question" data-l10n-id="ff-cpp-intro"></span>
-      <ul class="choices">
-        <li target="https://developer.mozilla.org/docs/Introduction" data-choice-id="general">General Firefox work
-          <div class="extra" data-l10n-id="ff-cpp-ff-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Platform/GFX/Contribute" data-choice-id="graphics">Graphics
-          <div class="extra" data-l10n-id="ff-cpp-graphics-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Accessibility/Contribute" data-choice-id="accessibility">Accessibility
-          <div class="extra" data-l10n-id="ff-cpp-access-extra"></div>
-        </li>
-        <li target="http://wiki.mozilla.org/Networking" data-choice-id="networking">Networking
-          <div class="extra" data-l10n-id="ff-cpp-net-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/JavaScript:New_to_SpiderMonkey" data-choice-id="spidermonkey">Spidermonkey: the JavaScript engine
-          <div class="extra" data-l10n-id="ff-cpp-spider-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Media" data-choice-id="media">Media
-          <div class="extra" data-l10n-id="ff-cpp-media-extra"></div>
-        </li>
-      </ul>
-    </div>
 
     <div class="group" id="ff-js">
       <span class="question" data-l10n-id="ff-js-intro"></span>
