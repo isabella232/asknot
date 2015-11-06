@@ -67,7 +67,7 @@
         <li next-group="translate"><span data-l10n-id="translation"></span></li>
         <li next-group="advocate"><span data-l10n-id="advocacy"></span></li>
         <li next-group="teach"><span data-l10n-id="teaching"></span></li>
-        <li next-group="uxdesign"><span data-l10n-id="uxdesign"></span></li>
+        <li next-group="uxuidesign"><span data-l10n-id="uxuidesign"></span></li>
       </ul>
     </div>
 
@@ -87,29 +87,33 @@
       </ul>
     </div>
 
-<!--UX DESIGN -->
-    <div class="group" id="uxdesign">
-      <span class="question" data-l10n-id="uxdesign-intro"></span>
+<!-- UX/UI DESIGN -->
+    <div class="group" id="uxuidesign">
+      <span class="question" data-l10n-id="uxuidesign-intro"></span>
       <ul class="choices">
-        <li target="https://wiki.mozilla.org/MDN/Development/Contribute/Design" data-choice-id="l10n-creative">Mozilla creative
+        <li target="https://github.com/nitramr/indigoDock" data-choice-id="l10n-creative">indigoDock
           <div class="extra" data-l10n-id="creative-extra"></div>
+        </li>
+        <li target="" data-choice-id="l10n-creative-other">Other things
+          <div class="extra" data-l10n-id="creative-others"></div>
         </li>
       </ul>
     </div>
 
+<!--SUPPORT -->
     <div class="group" id="support">
       <span class="question" data-l10n-id="support-intro"></span>
       <ul class="choices">
-        <li target="https://support.mozilla.org/en-US/get-involved/questions" data-choice-id="sumoqa">support.mozilla.org
+        <li target="http://forums.scribus.net" data-choice-id="sumoqa">forums.scribus.net
           <div class="extra" data-l10n-id="sumo-extra"></div>
         </li>
-        <li target="https://support.mozilla.org/en-US/get-involved/kb" data-choice-id="sumoqa">Mozilla Knowledge Base
+        <li target="https://support.mozilla.org/en-US/get-involved/kb" data-choice-id="sumoqa">Scribus Knowledge Base
           <div class="extra" data-l10n-id="sumokb-extra"></div>
         </li>
-        <li target="https://support.mozilla.org/en-US/get-involved/army-of-awesome" data-choice-id="sumoaoa">Army of Awesome
+        <li target="https://support.mozilla.org/en-US/get-involved/army-of-awesome" data-choice-id="sumoaoa">Scribus Twitter Army
           <div class="extra" data-l10n-id="sumoaoa-extra"></div>
         </li>
-        <li target="https://wiki.mozilla.org/Advocacy" data-choice-id="useradvocacy">User advocacy
+        <li target="https://wiki.mozilla.org/Advocacy" data-choice-id="useradvocacy">Scribus User advocacy
           <div class="extra" data-l10n-id="user-advocacy-extra"></div>
         </li>
       </ul>
@@ -121,11 +125,48 @@
         <li target="https://wiki.mozilla.org/QA/Community/Bug_Day" data-choice-id="bugday">Join a Bug Day
           <div class="extra" data-l10n-id="ff-bugday-extra"></div>
         </li>
-        <li target="https://quality.mozilla.org/docs/firefox/install-a-nightly-browser/" data-choice-id="nightly">Use Firefox Nightly
-          <div class="extra" data-l10n-id="ff-nightly-extra"></div>
+        <li target="" data-choice-id="nightly">Use Scribus SVN
+          <div class="extra" data-l10n-id="scribus-nightly-extra"></div>
         </li>
       </ul>
     </div>
+
+    <div class="group" id="proglang">
+      <span class="question" data-l10n-id="question"></span>
+      <ul class="choices">
+        <ul class="choices">
+          <li next-group="lin">Linux</li>
+          <li next-group="win">Windows</li>
+          <li next-group="osx">OSX</li>
+        </ul>
+      </div>
+
+      <div class="group" id="lin">
+        <span class="question" data-l10n-id="cpp-intro"></span>
+        <ul class="choices">
+          <li target="" data-choice-id="scribus-lin">Linux
+            <div class="extra" data-l10n-id="-extra"></div>
+          </li>
+  <!--        <li target="https://wiki.mozilla.org/B2G/Hacking" data-choice-id="boot2gecko">Boot2Gecko
+            <div class="extra" data-l10n-id="cpp-b2g-extra"></div>
+          </li>
+          <li target="https://developer.mozilla.org/docs/Simple_Thunderbird_build" data-choice-id="thunderbird">Thunderbird
+            <div class="extra" data-l10n-id="cpp-thunderbird-extra"></div>
+          </li>
+          <li target="http://www.seamonkey-project.org/dev/" data-choice-id="seamonkey">Seamonkey
+            <div class="extra" data-l10n-id="cpp-seamonky-extra"></div>
+          </li>
+          <li target="https://github.com/kripken/emscripten/" data-choice-id="emscripten">emscripten
+            <div class="extra" data-l10n-id="cpp-ems-extra"></div>
+          </li>
+          <li target="https://wiki.mozilla.org/SVG:Contribute" data-choice-id="svg">SVG Project
+            <div class="extra" data-l10n-id="cpp-svg-extra"></div>
+          </li>
+          <li target="https://wiki.mozilla.org/MathML:Home_Page" data-choice-id="mathml">MathML
+            <div class="extra" data-l10n-id="cpp-mathml-extra"></div>
+          </li> -->
+        </ul>
+      </div>
 
 <!-- TRANSLATIONS -->
     <div class="group" id="translate">
@@ -189,13 +230,13 @@
       <ul class="choices">
         <li next-group="cpp">C++</li>
         <li next-group="py">Python</li>
-<!--    <li next-group="js">JavaScript</li>
+        <li next-group="js">JavaScript</li>
         <li next-group="php">PHP</li>
         <li next-group="java">Java</li>
         <li next-group="perl">Perl</li>
         <li next-group="c">C</li>
         <li next-group="rust">Rust</li>
-        <li next-group="go">Go</li> -->
+        <li next-group="go">Go</li>
       </ul>
     </div>
 <!-- C++ Language -->
