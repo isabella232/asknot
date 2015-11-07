@@ -75,18 +75,27 @@
     <div class="group" id="softtest">
       <span class="question" data-l10n-id="qa-intro"></span>
       <ul class="choices">
-        <li target="https://quality.mozilla.org/teams/desktop-firefox/" data-choice-id="scribusqa">Scribus QA
-          <div class="extra" data-l10n-id="scribusqa-extra"></div>
+        <!-- Test Scribus Bleeding Edge -->
+        <li target="https://quality.mozilla.org/teams/desktop-firefox/" data-choice-id="qascribus">Scribus QA
+          <div class="extra" data-l10n-id="qa-scribus-extra"></div>
         </li>
-        <li target="https://quality.mozilla.org/teams/thunderbird/" data-choice-id="scripterqa">Scripter QA
-          <div class="extra" data-l10n-id="scripterqa-extra"></div>
+        <!-- Test Scripter -->
+        <li target="https://quality.mozilla.org/teams/thunderbird/" data-choice-id="qascripter">Scripter QA
+          <div class="extra" data-l10n-id="qa-scripter-extra"></div>
         </li>
-        <li target="https://quality.mozilla.org/teams/web-qa/" data-choice-id="webqa">Web QA
-          <div class="extra" data-l10n-id="webqa-extra"></div>
+        <!-- Test Scribus plugins -->
+        <li target="https://quality.mozilla.org/teams/thunderbird/" data-choice-id="qaplugins">Plugins QA
+          <div class="extra" data-l10n-id="qa-plugin-extra"></div>
         </li>
+        <!-- Test Scribus related websites -->
+        <li target="https://quality.mozilla.org/teams/web-qa/" data-choice-id="qaweb">Web QA
+          <div class="extra" data-l10n-id="qa-web-extra"></div>
+        </li>
+        <!-- Future bug hunting days? or MantisBT cleanup days?-->
         <li target="https://wiki.mozilla.org/QA/Community/Bug_Day" data-choice-id="bugday">Join a Bug Day
           <div class="extra" data-l10n-id="ff-bugday-extra"></div>
         </li>
+        <!-- Install Scribus bleeding edge (perhapse merge with ) -->
         <li target="nightly" data-choice-id="nightly">Use Scribus SVN
           <div class="extra" data-l10n-id="scribus-nightly-extra"></div>
         </li>
@@ -98,9 +107,19 @@
     <div class="group" id="uxuidesign">
       <span class="question" data-l10n-id="uxuidesign-intro"></span>
       <ul class="choices">
+        <!-- update PP and other UI elements -->
         <li target="https://github.com/nitramr/indigoDock" data-choice-id="l10n-creative">indigoDock
           <div class="extra" data-l10n-id="creative-extra"></div>
         </li>
+        <!-- Learn Qt5 C++ Interface Design -->
+        <li target="" data-choice-id="l10n-creative">Learn Qt5 C++ Interface Design
+          <div class="extra" data-l10n-id="creative-extra"></div>
+        </li>
+        <!-- Propose a Design -->
+        <li target="" data-choice-id="l10n-creative">Propose a design
+          <div class="extra" data-l10n-id="creative-extra"></div>
+        </li>
+        <!-- How to write UI/UX proposals? -->
         <li target="" data-choice-id="l10n-creative-other">Other things
           <div class="extra" data-l10n-id="creative-others"></div>
         </li>
@@ -111,15 +130,23 @@
     <div class="group" id="support">
       <span class="question" data-l10n-id="support-intro"></span>
       <ul class="choices">
-        <li target="http://forums.scribus.net" data-choice-id="sumoqa">forums.scribus.net
-          <div class="extra" data-l10n-id="sumo-extra"></div>
-        </li>
+        <!-- link to the wiki? or a wiki landing page explaining how to? -->
         <li target="https://support.mozilla.org/en-US/get-involved/kb" data-choice-id="sumoqa">Scribus Knowledge Base
           <div class="extra" data-l10n-id="sumokb-extra"></div>
         </li>
-        <li target="https://support.mozilla.org/en-US/get-involved/army-of-awesome" data-choice-id="sumoaoa">Scribus Twitter Army
+        <!-- Scribus twitter feed or perhaps #Scribus feed?  -->
+        <li target="https://support.mozilla.org/en-US/get-involved/army-of-awesome" data-choice-id="su-scribus-twitter">Scribus Twitter Army
           <div class="extra" data-l10n-id="sumoaoa-extra"></div>
         </li>
+        <!-- Scribus g+ community -->
+        <li target="https://plus.google.com/u/0/b/109612024486187515483/communities/110151182273894491551" data-choice-id="su-scribus-gplus">Scribus User advocacy
+          <div class="extra" data-l10n-id="su-extra"></div>
+        </li>
+        <!--take them to forum announcement section -->
+        <li target="http://forums.scribus.net/index.php/board,18.0.html" data-choice-id="su-scribus-forums">forums.scribus.net
+          <div class="extra" data-l10n-id="su-extra"></div>
+        </li>
+        <!-- Not sure what this will be -->
         <li target="https://wiki.mozilla.org/Advocacy" data-choice-id="useradvocacy">Scribus User advocacy
           <div class="extra" data-l10n-id="user-advocacy-extra"></div>
         </li>
@@ -187,7 +214,7 @@
     <div class="group" id="proglang">
       <span class="question" data-l10n-id="question"></span>
       <ul class="choices">
-        <li next-group="cpp">C++</li>
+        <li next-group="cpp">Qt C++</li>
         <li next-group="py">Python</li>
         <li next-group="js">JavaScript</li>
         <li next-group="php">PHP</li>
