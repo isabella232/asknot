@@ -83,8 +83,8 @@
         <li target="https://quality.mozilla.org/teams/thunderbird/" data-choice-id="qascripter">Scripter QA
           <div class="extra" data-l10n-id="qa-scripter-extra"></div>
         </li>
-        <!-- Test Scribus plugins -->
-        <li target="https://quality.mozilla.org/teams/thunderbird/" data-choice-id="qaplugins">Plugins QA
+        <!-- Test QML Plugins -->
+        <li target="https://quality.mozilla.org/teams/thunderbird/" data-choice-id="qaplugins">Plugins (QML) QA
           <div class="extra" data-l10n-id="qa-plugin-extra"></div>
         </li>
         <!-- Test Scribus related websites -->
@@ -126,7 +126,7 @@
       </ul>
     </div>
 
-<!--SUPPORT -->
+<!-- SUPPORT -->
     <div class="group" id="support">
       <span class="question" data-l10n-id="support-intro"></span>
       <ul class="choices">
@@ -138,8 +138,12 @@
         <li target="https://support.mozilla.org/en-US/get-involved/army-of-awesome" data-choice-id="su-scribus-twitter">Scribus Twitter Army
           <div class="extra" data-l10n-id="sumoaoa-extra"></div>
         </li>
+        <!-- Scribus Github community -->
+        <li target="http://github.com/scribusproject/" data-choice-id="su-scribus-github">Scribus Github community
+          <div class="extra" data-l10n-id="su-extra"></div>
+        </li>
         <!-- Scribus g+ community -->
-        <li target="https://plus.google.com/u/0/b/109612024486187515483/communities/110151182273894491551" data-choice-id="su-scribus-gplus">Scribus User advocacy
+        <li target="https://plus.google.com/u/0/b/109612024486187515483/communities/110151182273894491551" data-choice-id="su-scribus-gplus">Scribus g+ Community
           <div class="extra" data-l10n-id="su-extra"></div>
         </li>
         <!--take them to forum announcement section -->
@@ -158,22 +162,22 @@
     <div class="group" id="translate">
       <span class="question" data-l10n-id="translate-intro"></span>
       <ul class="choices">
-        <li target="https://wiki.mozilla.org/L10n" data-choice-id="l10n-ff">Firefox
+        <li target="https://wiki.mozilla.org/L10n" data-choice-id="l10n-ff">Translate Scribus via Transifex
           <div class="extra" data-l10n-id="l10n-extra-ff"></div>
         </li>
-        <li target="https://wiki.mozilla.org/L10n" data-choice-id="l10n-tb">Thunderbird
+        <li target="https://wiki.mozilla.org/L10n" data-choice-id="l10n-tb">Documentation
           <div class="extra" data-l10n-id="l10n-extra-tb"></div>
         </li>
-        <li target="https://wiki.mozilla.org/L10n" data-choice-id="l10n-fxos">Firefox OS
+        <li target="https://wiki.mozilla.org/L10n" data-choice-id="l10n-fxos">Tutorials
           <div class="extra" data-l10n-id="l10n-extra-fxos"></div>
         </li>
-        <li target="https://wiki.mozilla.org/L10n" data-choice-id="l10n-fxan">Firefox for Android
+        <li target="https://wiki.mozilla.org/L10n" data-choice-id="l10n-fxan">Scribus Twitter in your language
           <div class="extra" data-l10n-id="ll10n-extra-fxan"></div>
         </li>
-        <li target="https://support.mozilla.org/en-US/get-involved/l10n" data-choice-id="l10n-sumo">Translate SUMO articles
+        <li target="https://support.mozilla.org/en-US/get-involved/l10n" data-choice-id="l10n-sumo">Translate articles
           <div class="extra" data-l10n-id="ll10n-extra-sumo"></div>
         </li>
-        <li target="https://wiki.mozilla.org/L10n:Web_parts" data-choice-id="l10n-web">Mozilla websites
+        <li target="https://wiki.mozilla.org/L10n:Web_parts" data-choice-id="l10n-web">Scribus websites
           <div class="extra" data-l10n-id="l10nweb-extra"></div>
         </li>
       </ul>
@@ -202,15 +206,16 @@
     <div class="group" id="teach">
       <span class="question" data-l10n-id="teach-intro"></span>
       <ul class="choices">
-        <li target="https://webmaker.org/en-US/teach" data-choice-id="webmaker">Make Tutorials
-          <div class="extra" data-l10n-id="webmake-extra"></div>
+        <li target="https://webmaker.org/en-US/teach" data-choice-id="tutorials">Make Tutorials
+          <div class="extra" data-l10n-id="teach-tutorials-extra"></div>
         </li>
         <li target="https://goggles.webmaker.org/" data-choice-id="presentations">Create Presentations
-          <div class="extra" data-l10n-id="presentations-extra" ></div>
+          <div class="extra" data-l10n-id="teach-presentations-extra" ></div>
         </li>
       </ul>
     </div>
 
+<!-- PROGRAM -->
     <div class="group" id="proglang">
       <span class="question" data-l10n-id="question"></span>
       <ul class="choices">
@@ -218,6 +223,7 @@
         <li next-group="py">Python</li>
         <li next-group="js">JavaScript</li>
         <li next-group="php">PHP</li>
+        <li next-group="qtdesigner">QtDesigner</li>
         <li next-group="java">Java</li>
         <li next-group="perl">Perl</li>
         <li next-group="c">C</li>
@@ -301,6 +307,16 @@
         </li>
         <li target="https://github.com/mozilla/treeherder-ui/" data-choice-id="treeherder">Treeherder
           <div class="extra" data-l10n-id="treeherder-extra"></div>
+        </li>
+      </ul>
+    </div>
+
+<!-- QT5 Designer -->
+    <div class="group" id="qtdesigner">
+      <span class="question" data-l10n-id="qtdesigner-intro"></span>
+      <ul class="choices">
+        <li target="https://github.com/mozilla/rust/wiki" data-choice-id="qtdesigner-ui">Qt5 Interface Building
+          <div class="extra" data-l10n-id="qtdesigner-extra"></div>
         </li>
       </ul>
     </div>
@@ -405,6 +421,21 @@
       </ul>
     </div>
 
+    <div class="group" id="ff-js">
+      <span class="question" data-l10n-id="ff-js-intro"></span>
+      <ul class="choices">
+        <li target="https://developer.mozilla.org/docs/Introduction" data-choice-id="firefox">General Firefox work
+          <div class="extra" data-l10n-id="ff-js-ff"></div>
+        </li>
+        <li target="https://wiki.mozilla.org/DevTools/GetInvolved" data-choice-id="developer-tools">Developer Tools
+          <div class="extra" data-l10n-id="ff-js-dev-extra"></div>
+        </li>
+        <li target="https://wiki.mozilla.org/Services/Sync#Get_Involved" data-choice-id="sync">Sync
+          <div class="extra" data-l10n-id="ff-js-sync-extra"></div>
+        </li>
+      </ul>
+    </div>
+
     <div class="group" id="java">
       <span class="question" data-l10n-id="java-intro"></span>
       <ul class="choices">
@@ -447,20 +478,6 @@
     </div>
 
 
-    <div class="group" id="ff-js">
-      <span class="question" data-l10n-id="ff-js-intro"></span>
-      <ul class="choices">
-        <li target="https://developer.mozilla.org/docs/Introduction" data-choice-id="firefox">General Firefox work
-          <div class="extra" data-l10n-id="ff-js-ff"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/DevTools/GetInvolved" data-choice-id="developer-tools">Developer Tools
-          <div class="extra" data-l10n-id="ff-js-dev-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Services/Sync#Get_Involved" data-choice-id="sync">Sync
-          <div class="extra" data-l10n-id="ff-js-sync-extra"></div>
-        </li>
-      </ul>
-    </div>
 
     <div id="responses">
       <div id="ok"><a href="javascript:" data-l10n-id="more"></a></div>
