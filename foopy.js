@@ -4,6 +4,15 @@
     var choices     = [];
     var stack       = [];
     var currentLang = "en"; // Default lang
+    var rtlLangs    = {"ar": "","fa": ""};
+
+    function detectRtl(value) {
+      if (value in rtlLangs) {
+        document.documentElement.dir = "rtl";
+      } else {
+        document.documentElement.dir = "ltr";
+      }
+    }
 
     function chooseNegativeResponse() {
         var responses = $('.negative').not('.visible');
@@ -21,7 +30,7 @@
     function trackExternalLink() {
       window.ga('send', 'event', 'outbound', 'click', $('#ok')[0].firstChild.href);
     }
-  
+
     function incrementAndWrap(curr, max) {
         if(max === undefined) {
           max = $('.choices li', groupNode).length;
@@ -34,10 +43,14 @@
     }
 
     function updateCurrentChoice(lastIndex) {
+        setLocationHashSuffix(getUIDAttribute(displayChoice(lastIndex)));
+    }
+
+    function displayChoice(lastIndex) {
         var lastChoice = $('.choices li', groupNode)[choices[choices.length - 1][lastIndex]];
         var choice     = $('.choices li', groupNode)[choices[choices.length - 1][choiceIndex[choiceIndex.length - 1]]];
         var nextChoice = $('.choices li', groupNode)[choices[choices.length - 1][incrementAndWrap(choiceIndex[choiceIndex.length - 1])]];
-      
+
         updateNegativeResponse();
         lastChoice.style.display = 'none';
         choice.style.display = 'inline';
@@ -46,16 +59,16 @@
         var isExternal = choice.hasAttribute('target');
         button.firstChild.href = !isExternal ?
             '#!/' + stack.join('/') + '/' + getUIDAttribute(choice) + '/' : choice.getAttribute('target');
-        
+
         $('#next a:first').attr('href', '#!/' + stack.join('/') + '/' + getUIDAttribute(nextChoice));
         $('#back a:first').attr('href', '#!/' + stack.join('/', stack.slice(stack.length - 1, 1)));
 
         if (isExternal) {
           button.addEventListener('click', trackExternalLink);
         }
-        setLocationHashSuffix(getUIDAttribute(choice));
+        return choice;
     }
-  
+
     function nextChoice(ev) {
         if(ev.which === 2) {
           return;
@@ -68,6 +81,11 @@
     }
 
     function switchGroup(group, choiceId) {
+        displayGroup(group, choiceId);
+        updateCurrentChoice(choiceIndex[choiceIndex.length - 1]);
+    }
+
+    function displayGroup(group, choiceId) {
         groupNode = document.getElementById(group);
 
         if (!stack.length || stack[stack.length - 1] !== group || choiceId) {
@@ -86,7 +104,6 @@
         $('#back')[0].style.display = group === firstChoice ? 'none' : 'block';
         $('#next')[0].style.display = group !== firstChoice && choices[choices.length - 1].length == 1 ? 'none' : 'block';
         $('.question', groupNode)[0].style.display = 'block';
-        updateCurrentChoice(choiceIndex[choiceIndex.length - 1]);
     }
 
     function cleanUpCurrent() {
@@ -126,13 +143,18 @@
 
     function onLangChange() {
         document.webL10n.setLanguage(this.value);
+        detectRtl(this.value);
         setLangQueryString(this.value)
     }
 
     function setLocationHashSuffix(value) {
-        var midValue = stack.join("/");
-
-        window.location.hash = "#!/" + midValue + "/" + value;
+        var midValue = stack.join("/"),
+            hash = "#!/" + midValue + "/" + value;
+        if (supportsPushState()) {
+          history.pushState({midValue: midValue, index: choiceIndex[choiceIndex.length-1]}, null, window.location.pathname + window.location.search + hash);
+        } else {
+            window.location.hash = hash;
+        }
     }
 
     // Uses HTML5 pushState with fallback to window.location
@@ -140,7 +162,6 @@
         var urlPart = "?lang=" + value + window.location.hash;
 
         currentLang = value;
-
         if (supportsPushState()) {
           history.pushState({ lang: value, location: window.location.hash },
                             "", urlPart);
@@ -198,6 +219,7 @@
         // If the browser language is supported, select the good option
 
         document.webL10n.setLanguage(value);
+        detectRtl(value);
         option.prop('selected', 'selected');
 
         currentLang = value;
@@ -209,6 +231,21 @@
     }
 
     window.onpopstate = function(event) {
+        if (event.state) {
+            if (event.state.midValue === stack.join("/")) { // navigate through items on same level
+                var lastIndex = choiceIndex[choiceIndex.length - 1];
+                choiceIndex[choiceIndex.length - 1] = event.state.index;
+                displayChoice(lastIndex);
+            } else { // navigate through levels
+                cleanUpCurrent();
+                stack.splice(stack.length - 1, 1);
+                choiceIndex.splice(choiceIndex.length - 1, 1);
+                choices.splice(choices.length - 1, 1);
+                var groups = event.state.midValue.split("/");
+                displayGroup(groups[groups.length - 1]);
+                displayChoice(choiceIndex[choiceIndex.length - 1]);
+            }
+        }
     }
 
     $(window).load(function() {

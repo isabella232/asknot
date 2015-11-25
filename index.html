@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <link rel="stylesheet" type="text/css" href="style.css" title="Default">
   <link rel="alternate stylesheet" type="text/css" href="plain.css" title="Bird's Eye View">
-  <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script>window.jQuery || document.write('<script src="jquery-1.11.2.min.js"><\/script>')</script>
   <script type="text/javascript" src="foopy.js"></script>
   <script type="text/javascript" src="l10n.js"></script>
   <link rel="resource" type="application/l10n" href="locales.ini" />
@@ -28,32 +29,35 @@
   <div id="lang">
     <span id="lang-selection" data-l10n-id="lang-selection">Language:</span>
     <select>
-      <option value='ar'>ar</option>
-      <option value='bn-BD'>bn-BD</option>
-	    <option value='bn-IN'>bn-IN</option>
-      <option value='de'>de</option>
-      <option selected value='en'>en</option>
-      <option value='es'>es</option>
-      <option value='fa'>fa</option>
-      <option value='fr'>fr</option>
-      <option value='el'>gr</option>
-      <option value='hi-IN'>hi-IN</option>
-      <option value='it'>it</option>
-      <option value='ko'>ko</option>
-      <option value='lv'>lv</option>
-      <option value='ml-IN'>ml-IN</option>
-      <option value='nl'>nl</option>
-      <option value='pl'>pl</option>
-      <option value='pt-BR'>pt-BR</option>
-      <option value='pt-PT'>pt-PT</option>
-      <option value='ro'>ro</option>
-      <option value='ru-RU'>ru-RU</option>
-      <option value='sq'>sq</option>
-      <option value='sv-SE'>sv-SE</option>
-      <option value='te'>te</option>
-      <option value='tr'>tr</option>
-      <option value='zh-CN'>zh-CN</option>
-      <option value='zh-TW'>zh-TW</option>
+      <option value='ar'>عربي | Arabic</option>
+      <option value='bn-BD'>বাংলা‬ (বাংলাদেশ) | Bengali (Bangladesh)</option>
+      <option value='bn-IN'>বাংলা (ভারত) | Bengali (India)</option>
+      <option value='de'>‪Deutsch | German</option>
+      <option selected value='en'>English</option>
+      <option value='es'>Español | Spanish</option>
+      <option value='fa'>‫فارسی‬ | ‪Persian</option>
+      <option value='fr'>français‬ | ‪French‬</option>
+      <option value='el'>Έλληνες | Greek</option>
+      <option value='gu-IN'>ગુજરાતી | Gujarati</option>
+      <option value='hi-IN'>हिंदी‬ | ‪Hindi‬</option>
+      <option value='id'>Indonesian</option>
+      <option value='it'>Italiano‬ | ‪Italian</option>
+      <option value='ko'>‪한국어‬ | ‪Korean‬</option>
+      <option value='lv'>Latviešu‬ | ‪Latvian</option>
+      <option value='ml-IN'>Malayalam</option>
+      <option value='ne-NP'>नेपाली | Nepali</option>
+      <option value='nl'>Dutch</option>
+      <option value='pl'>‪Polski‬ | ‪Polish‬</option>
+      <option value='pt-BR'>‪Português | Portuguese (Brasil)</option>
+      <option value='pt-PT'>‪Português‬ | Portuguese (‪Portugal)</option>
+      <option value='ro'>Română‬ | ‪Romanian</option>
+      <option value='ru-RU'>Русский‬ | ‪Russian‬</option>
+      <option value='sq'>‪shqipe‬ | ‪Albanian</option>
+      <option value='sv-SE'>Svenska‬ | ‪Swedish</option>
+      <option value='te'>తెలుగు | Telugu</option>
+      <option value='tr'>‪Türkçe‬ | ‪Turkish</option>
+      <option value='zh-CN'>中文 (中国)‬ | ‪Chinese (China)</option>
+      <option value='zh-TW'>‪中文 (台灣)‬ | ‪Chinese (Taiwan)</option>
     </select>
   </div>
 
@@ -502,7 +506,8 @@
     <div id="footer" data-l10n-id="credits"></div>
   </div>
   <footer>
-    <script src="//mozorg.cdn.mozilla.net/tabzilla/tabzilla.js"></script>
+    <script src="https://mozorg.cdn.mozilla.net/tabzilla/tabzilla.js"></script>
+    <script>window.Tabzilla || document.write('<script src="tabzilla.js"><\/script>')</script>
   </footer>
 </body>
 </html>
